@@ -85,4 +85,4 @@ def update_status():
     else:
         pkgs = [pkg for d in os.walk(str(target_dir))
                 for pkg in d[2] if pkg.endswith('.tar.bz2')]
-        status.active(f'Conda mirror ready - {len(pkgs)} packages')
+        status.active(f'Conda mirror ready - {len(pkgs)} packages available')
