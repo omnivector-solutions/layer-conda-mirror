@@ -1,0 +1,35 @@
+---
+options:
+  upstream_channel:
+    type: string
+    default: conda-forge
+    description: >
+      "The target channel to mirror. Can be a channel on
+      anaconda.org like 'conda-forge' or a full qualified
+      channel like 'https://repo.continuum.io/pkgs/free/'"
+  platform:
+    type: string
+    default: linux-64
+    description: >
+      "The OS platform(s) to mirror. one of 'linux-64',
+      'linux-32','osx-64', 'win-32', 'win-64'"
+  threads:
+    type: int
+    default: 0
+    description: >
+      "Num of threads for validation. 1: Serial mode.
+      0: All available cores."
+  update_interval:
+    type: string
+    default: weekly
+    description: >
+      "Interval for re downloading conda packages, given in systemd date syntax.
+      . Note that the entire upstream repository will be downloaded every time,
+      so it's best that you don't make this too frequent if you are mirroring
+      a lot of packages.
+
+      By default, this is set to run every monday at 12am."
+  port:
+    type: int
+    default: 80
+    description: Port to serve packages through HTTP

@@ -1,0 +1,10 @@
+---
+includes:
+  - layer:basic
+  - layer:status
+  - layer:venv
+  - layer:nginx
+options:
+  venv:
+    packages:
+      - conda-mirror

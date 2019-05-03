@@ -1,0 +1,10 @@
+---
+name: conda-mirror
+summary: Mirrors an upstream conda channel to a nginx server.
+maintainer: tylerscheuble <tyler@scheuble.us>
+description: Mirrors an upstream conda channel to a nginx server.
+series:
+  - bionic
+tags:
+  - conda
+  - omnivector

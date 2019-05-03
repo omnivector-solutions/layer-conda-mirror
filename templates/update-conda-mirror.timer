@@ -1,0 +1,10 @@
+[Unit]
+Description=Execute update on a regular interval
+
+[Timer]
+OnCalendar={{interval}}
+Persistent=true
+Unit=update-conda-mirror.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,15 @@
+[Unit]
+Description=Fetch and update conda upstream repository
+
+[Service]
+Type=simple
+ExecStart={{env_bin}}/conda-mirror \
+  --upstream-channel {{upstream_channel}} \
+  --target-directory {{target_dir}} \
+  --temp-directory {{temp_dir}} \
+  --platform {{platform}} \
+  --num-threads {{threads}} \
+  -vv
+
+[Install]
+WantedBy=multi-user.target
