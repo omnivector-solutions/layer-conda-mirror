@@ -33,6 +33,7 @@ def init_conda_mirror():
 
     # enable timer
     check_call(['systemctl', 'enable', 'update-conda-mirror.timer'])
+    check_call(['systemctl', 'start', 'update-conda-mirror.timer'])
 
     # do initial sync
     check_call(['systemctl', 'start', 'update-conda-mirror.service'])
